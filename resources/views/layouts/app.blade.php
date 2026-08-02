@@ -69,8 +69,5 @@
 @endif
 @yield('content')
 </main>
-<footer class="container footer">
-  SIRS &mdash; Sistem Informasi Rumah Sakit (demo sederhana)
-</footer>
 </body>
 </html>
