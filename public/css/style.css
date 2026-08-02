@@ -1,0 +1,303 @@
+/* SIRS - Sistem Informasi Rumah Sakit */
+/* CSS sederhana agar user tidak sakit mata */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #26302e;
+  background: #f2f6f5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Navigasi atas */
+.topnav {
+  background: #045d56;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #d8efec;
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-user {
+  margin-left: 12px;
+  color: #9fccc6;
+}
+
+/* Konten utama */
+main.container {
+  background: #fff;
+  border: 1px solid #d5dedc;
+  border-top: 3px solid #045d56;
+  padding: 16px 20px 24px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 21px;
+  margin: 8px 0 16px;
+  color: #045d56;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 20px 0 8px;
+}
+
+a {
+  color: #0b7a6b;
+}
+
+/* Kartu ringkasan dashboard */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.card {
+  flex: 1 1 150px;
+  border: 1px solid #cfe0dd;
+  background: #f4faf9;
+  padding: 10px 14px;
+}
+
+.card .num {
+  font-size: 24px;
+  font-weight: bold;
+  color: #045d56;
+}
+
+.card .label {
+  font-size: 13px;
+  color: #55645f;
+}
+
+/* Tabel */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+}
+
+th, td {
+  border: 1px solid #c9d4d2;
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #e3efed;
+}
+
+.detail-table {
+  width: auto;
+  min-width: 320px;
+}
+
+.total-row th {
+  background: #d2e6e2;
+}
+
+/* Formulir */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  padding: 6px 8px;
+  border: 1px solid #a9b8b5;
+  font: inherit;
+}
+
+.stacked-form {
+  max-width: 440px;
+}
+
+.stacked-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.stacked-form input,
+.stacked-form select,
+.stacked-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+}
+
+.inline-form {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.search-form {
+  margin: 12px 0;
+}
+
+button {
+  padding: 6px 14px;
+  border: 1px solid #033f3a;
+  background: #0b7a6b;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  background: #045d56;
+}
+
+.btn-danger {
+  background: #b03a2e;
+  border-color: #7d281f;
+}
+
+.btn-danger:hover {
+  background: #7d281f;
+}
+
+/* Flash message */
+.flash {
+  padding: 8px 12px;
+  margin: 10px 0;
+  border: 1px solid;
+}
+
+.flash-success {
+  background: #e4f5ef;
+  border-color: #6fbfa4;
+  color: #145c43;
+}
+
+.flash-error {
+  background: #fbe9e7;
+  border-color: #d98880;
+  color: #7d281f;
+}
+
+/* Label status pembayaran */
+.status {
+  padding: 2px 8px;
+  border: 1px solid #999;
+  background: #eee;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.status-lunas {
+  background: #e4f5ef;
+  border-color: #6fbfa4;
+  color: #145c43;
+}
+
+.status-belum_lunas {
+  background: #fdf3d8;
+  border-color: #d4b95e;
+  color: #6d5a12;
+}
+
+/* Stok menipis */
+.low-stock {
+  color: #b03a2e;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  color: #6d7a77;
+  font-size: 13px;
+  padding-bottom: 24px;
+}
+
+/* Cetak laporan */
+@media print {
+  .topnav,
+  .footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  main.container {
+    border: 0;
+    max-width: 100%;
+  }
+}
+
+/* Tombol logout di nav (form POST) tampil seperti link nav */
+.nav-links .link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: #d8efec;
+  cursor: pointer;
+  font: inherit;
+}
+
+.nav-links .link-button:hover {
+  text-decoration: underline;
+  background: none;
+}
+
+/* Label status baris resep (dua tahap penyerahan obat) */
+.status-diresepkan {
+  background: #fdf3d8;
+  border-color: #d4b95e;
+  color: #6d5a12;
+}
+
+.status-diserahkan {
+  background: #e4f5ef;
+  border-color: #6fbfa4;
+  color: #145c43;
+}
